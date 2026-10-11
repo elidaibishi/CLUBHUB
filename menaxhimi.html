@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Udhëzues praktik për panelin Club Hub: grupet, pjesëmarrësit, anëtarësimet dhe rregullat e menaxhimit.">
+  <meta name="theme-color" content="#fbfaf6">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sq_AL">
+  <meta property="og:site_name" content="Club Hub">
+  <meta property="og:title" content="Udhëzuesi i menaxhimit — Club Hub">
+  <meta property="og:description" content="Udhëzime për organizimin e grupeve, pjesëmarrësve dhe anëtarësimeve në Club Hub.">
+  <meta name="twitter:card" content="summary">
+  <title>Udhëzuesi i menaxhimit — Club Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Kalo te përmbajtja</a>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand brand" href="index.html" aria-label="Club Hub, faqja kryesore">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span>club<span class="brand-accent">hub</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Hap ose mbyll navigimin">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-4">
+            <li class="nav-item"><a class="nav-link site-nav-link" href="clubhub.html">Si funksionon</a></li>
+            <li class="nav-item"><a class="nav-link site-nav-link" href="club-journey.html">Hapat tanë</a></li>
+            <li class="nav-item"><a class="nav-link site-nav-link" href="benefits.html">Përfitimet</a></li>
+            <li class="nav-item"><a class="btn button button-small nav-cta" href="pjesemarrja.html">Pjesëmarrja <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="detail-hero">
+      <div class="container">
+        <p class="eyebrow detail-eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Udhëzuesi i organizatorit</p>
+        <h1>Një komunitet i mirë<br><span>nis me organizim të qartë.</span></h1>
+        <p class="lead">Këtu gjenden hapat dhe rregullat praktike për krijimin e grupeve, regjistrimin e pjesëmarrësve dhe menaxhimin e anëtarësimeve në Club Hub.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn button" href="#groups">Si krijohet grupi <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-outline-success" href="#rules">Lexo rregullat</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section" id="dashboard" aria-labelledby="dashboard-title">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-5">
+            <p class="eyebrow">Paneli kryesor</p>
+            <h2 class="section-title" id="dashboard-title">Një pamje e shpejtë e komunitetit.</h2>
+          </div>
+          <div class="col-12 col-lg-7 detail-copy">
+            <p>Paneli është pika e nisjes për administratorin. Ai përmbledh numrin e pjesëmarrësve, numrin e grupeve, personat pa grup dhe regjistrimet më të fundit.</p>
+            <p>Kartat e grupeve tregojnë emrin dhe numrin aktual të anëtarëve. Zgjidh një grup për të parë anëtarët e tij; përdor lidhjen e pjesëmarrësve për të regjistruar ose kërkuar një person.</p>
+            <div class="detail-note">
+              <strong>Qasje e mbrojtur:</strong> paneli aktual është për administratorë të identifikuar. Hyrja kërkon aplikacionin të hapur përmes serverit PHP dhe databazës së konfiguruar.
+            </div>
+          </div>
+        </div>
+        <div class="detail-callout mt-4 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+          <div><h2>Kur serveri lokal është gati</h2><p>Nise Apache dhe MySQL, pastaj hyr në panelin e administratorit për të parë të dhënat e ruajtura.</p></div>
+          <a class="btn button" href="ADMIN_GUIDE.md" data-admin-path="index.php">Hap panelin <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="detail-footnote mt-3 mb-0">Nëse paneli nuk hapet, adresa lokale nuk ka server aktiv. Ndiq <a href="ADMIN_GUIDE.md">udhëzuesin e instalimit</a>; kjo faqe shpjeguese mund të lexohet edhe pa server.</p>
+      </div>
+    </section>
+
+    <section class="detail-section" id="groups" aria-labelledby="groups-title">
+      <div class="container">
+        <div class="row align-items-end g-3 section-heading">
+          <div class="col-12 col-lg-8"><p class="eyebrow">Krijimi dhe kujdesi për grupet</p><h2 class="section-title" id="groups-title">Grupi duhet të ketë qëllim, emër dhe kujdestar.</h2></div>
+          <div class="col-12 col-lg-4"><p class="section-intro">Këto janë rregulla të sugjeruara për organizim të rregullt, jo kufizime automatike të programit.</p></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4"><article class="detail-card"><span class="detail-card-number">01</span><h3>Emër i qartë</h3><p>Zgjidh emër që tregon temën e klubit dhe nuk ngatërrohet me grupet ekzistuese. Shkruaj një përshkrim të shkurtër që tregon për kë është.</p></article></div>
+          <div class="col-12 col-md-6 col-lg-4"><article class="detail-card"><span class="detail-card-number">02</span><h3>Qëllim dhe aktivitet</h3><p>Përpara krijimit, përcakto çfarë do të bëjë grupi dhe një ide për takimin e parë. Nise me një aktivitet të vogël dhe të arritshëm.</p></article></div>
+          <div class="col-12 col-md-6 col-lg-4"><article class="detail-card"><span class="detail-card-number">03</span><h3>Përgjegjës dhe komunikim</h3><p>Cakto një organizator që mirëpret anëtarët, ndan njoftimet e takimeve dhe kujdeset që biseda të jetë e respektueshme.</p></article></div>
+        </div>
+        <ol class="detail-steps mt-4">
+          <li class="detail-step"><div><h3>Kontrollo listën para krijimit</h3><p>Shiko grupet ekzistuese dhe numrin e anëtarëve, që të mos krijosh pa nevojë një grup të njëjtë. Nëse një grup ekzistues i përshtatet idesë, përdore atë.</p></div></li>
+          <li class="detail-step"><div><h3>Krijo grupin dhe verifikoje</h3><p>Shto emrin dhe përshkrimin. Pas ruajtjes, kontrollo që grupi shfaqet në listë dhe se përshkrimi është i saktë.</p></div></li>
+          <li class="detail-step"><div><h3>Mbaje listën aktuale</h3><p>Shto vetëm persona që janë regjistruar dhe kanë pranuar të marrin pjesë. Largo anëtarësimet e vjetra kur një person largohet nga ai grup.</p></div></li>
+        </ol>
+        <div class="detail-note mt-4"><strong>Kufizim aktual:</strong> paneli lejon krijimin dhe shikimin e grupeve, por nuk ka ende veprime për riemërtimin ose fshirjen e grupit. Mos prit që një grup të hiqet nga aplikacioni; ruaj historikun dhe kërko miratim administrativ për ndryshime të tilla.</div>
+      </div>
+    </section>
+
+    <section class="detail-section" id="members" aria-labelledby="members-title">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-5"><p class="eyebrow">Pjesëmarrësit dhe anëtarësimet</p><h2 class="section-title" id="members-title">Regjistro personin një herë. Lidhe me grupet që zgjedh.</h2></div>
+          <div class="col-12 col-lg-7 detail-copy">
+            <p>Regjistro emrin e plotë dhe email-in vetëm kur nevojitet për komunikim. Pas ruajtjes, kërko pjesëmarrësin në listë dhe hape profilin për të parë grupet e tij.</p>
+            <p>Nga profili zgjidh një ose disa grupe ku personi do të marrë pjesë. Nëse menaxhon një grup të vetëm, mund ta hapësh grupin dhe të zgjedhësh një person që ende nuk është anëtar.</p>
+            <p>Përdor kontrollet e panelit për të caktuar pjesëmarrësit në grupet e tyre, për të menaxhuar anëtarësimet ose për të fshirë një regjistrim të plotë.</p>
+          </div>
+        </div>
+        <div class="row g-4 mt-2">
+          <div class="col-12 col-lg-6">
+            <article class="detail-card d-flex flex-column align-items-start">
+              <span class="detail-card-number" aria-hidden="true">+</span>
+              <h3>Regjistro dhe cakto pjesëmarrës</h3>
+              <p>Hap panelin për ta regjistruar një person të ri. Pastaj hape profilin e tij dhe zgjidh një ose disa grupe për anëtarësim.</p>
+              <a class="btn button mt-auto" href="ADMIN_GUIDE.md" data-admin-path="participants.php#participant-form">Regjistro pjesëmarrësin <span aria-hidden="true">↗</span></a>
+              <a class="text-link mt-3" href="ADMIN_GUIDE.md" data-admin-path="participants.php">Shiko listën dhe cakto grupet <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+          <div class="col-12 col-lg-6">
+            <article class="detail-card d-flex flex-column align-items-start">
+              <span class="detail-card-number" aria-hidden="true">−</span>
+              <h3>Largo anëtarësimin ose fshije personin</h3>
+              <p>Nga faqja e grupit mund ta largosh anëtarin vetëm nga ai grup. Në listën e pjesëmarrësve, butoni “Fshi” e fshin personin dhe të gjitha lidhjet e tij pas konfirmimit.</p>
+              <a class="btn btn-outline-success mt-auto" href="ADMIN_GUIDE.md" data-admin-path="groups.php">Menaxho anëtarët e grupeve <span aria-hidden="true">↗</span></a>
+              <a class="text-link mt-3" href="ADMIN_GUIDE.md" data-admin-path="participants.php">Hap listën për fshirje të plotë <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+        <div class="detail-note mt-4">
+          Veprimet kryhen në panelin e administratorit dhe ruhen në databazë. Paneli kërkon Apache dhe MySQL aktivë; nëse nuk hapet, ndiq udhëzuesin e instalimit.
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section" id="rules" aria-labelledby="rules-title">
+      <div class="container">
+        <div class="row align-items-end g-3 section-heading">
+          <div class="col-12 col-lg-8"><p class="eyebrow">Rregullat e përbashkëta</p><h2 class="section-title" id="rules-title">Siguri dhe respekt për çdo anëtar.</h2></div>
+          <div class="col-12 col-lg-4"><p class="section-intro">Rregulla të thjeshta ndihmojnë që aktivitetet dhe të dhënat të menaxhohen me kujdes.</p></div>
+        </div>
+        <div class="rules-list">
+          <article class="rule-row"><span>01</span><div><h3>Pëlqim dhe transparencë</h3><p>Trego pse po mblidhen të dhënat dhe përdori vetëm për organizimin e Club Hub. Mos regjistro dikë në grup pa marrëveshjen e tij.</p></div></article>
+          <article class="rule-row"><span>02</span><div><h3>Qasje vetëm për administratorë</h3><p>Kredencialet e panelit nuk ndahen. Çdo administrator përdor fjalëkalim të fortë dhe del nga llogaria në pajisje të përbashkëta.</p></div></article>
+          <article class="rule-row"><span>03</span><div><h3>Fshirje e kujdesshme</h3><p>Fshirja e pjesëmarrësit është veprim përfundimtar në aplikacion. Përpara konfirmimit kontrollo identitetin dhe arsyen; nëse personi vetëm largohet nga një klub, hiqe vetëm nga ai grup.</p></div></article>
+          <article class="rule-row"><span>04</span><div><h3>Komunitet mikpritës</h3><p>Respekto kufijtë dhe privatësinë e anëtarëve. Mos publiko pa leje të dhëna kontakti, fotografi ose biseda nga grupet.</p></div></article>
+          <article class="rule-row"><span>05</span><div><h3>Kopje rezervë</h3><p>Administratori duhet të bëjë kopje rezervë të databazës rregullisht. Eksporti CSV është i dobishëm për listën, por nuk zëvendëson kopjen e plotë të databazës dhe duhet ruajtur me kujdes.</p></div></article>
+        </div>
+        <p class="detail-footnote mt-3 mb-0">Këto janë rregulla të rekomanduara për organizimin e Club Hub; përshtati dhe miratoji para se t'i përdorësh si politikë zyrtare.</p>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <div class="container">
+        <div class="detail-callout d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+          <div><h2>Mbaje Club Hub të organizuar dhe të hapur.</h2><p>Kthehu te detajet e pjesëmarrjes ose ndiq udhëzuesin për ta ndezur panelin dinamik.</p></div>
+          <div class="d-flex flex-wrap gap-2"><a class="btn button" href="pjesemarrja.html">Detajet e pjesëmarrjes</a><a class="btn btn-outline-light" href="ADMIN_GUIDE.md">Nisja e panelit</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row align-items-center g-3 footer-content">
+        <div class="col-12 col-md-4"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">C</span><span>club<span class="brand-accent">hub</span></span></a></div>
+        <div class="col-12 col-md-4"><p>Një vend për ide, klube dhe njerëz që krijojnë së bashku.</p></div>
+        <div class="col-12 col-md-4"><span class="footer-copy">© Club Hub. Të gjitha të drejtat e rezervuara.</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="panel-unavailable" tabindex="-1" aria-labelledby="panel-unavailable-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="panel-unavailable-title">Po kontrollo panelin e menaxhimit</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Mbyll"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-2" id="panel-unavailable-message" role="status" aria-live="polite">Po kontrolloj nëse Apache dhe PHP janë duke punuar...</p>
+          <p class="mb-0" id="panel-unavailable-help">Nëse serveri përgjigjet, faqja përkatëse do të hapet menjëherë.</p>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-outline-success" href="ADMIN_GUIDE.md">Udhëzuesi i nisjes</a>
+          <button type="button" class="btn button" data-bs-dismiss="modal">Në rregull</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script>
+    document.querySelectorAll('[data-admin-path]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var appPath = link.getAttribute('data-admin-path');
+        var appUrl = window.location.protocol === 'file:'
+          ? new URL(appPath, 'http://localhost/ClubHub/')
+          : new URL(appPath, window.location.href);
+        var timeout = new AbortController();
+        var timeoutId = window.setTimeout(function () {
+          timeout.abort();
+        }, 5000);
+        var panelModal = document.getElementById('panel-unavailable');
+        var panelTitle = document.getElementById('panel-unavailable-title');
+        var panelMessage = document.getElementById('panel-unavailable-message');
+        var panelHelp = document.getElementById('panel-unavailable-help');
+
+        fetch(appUrl.href, {
+          method: 'GET',
+          mode: window.location.protocol === 'file:' ? 'no-cors' : 'same-origin',
+          cache: 'no-store',
+          credentials: window.location.protocol === 'file:' ? 'omit' : 'same-origin',
+          signal: timeout.signal
+        }).then(function (response) {
+          if (response.type === 'opaque') {
+            window.location.href = appUrl.href;
+            return;
+          }
+
+          return response.text().then(function (body) {
+            var contentType = response.headers.get('content-type') || '';
+            if (!response.ok || /^\s*<\?php/i.test(body) || /x-httpd-php/i.test(contentType)) {
+              throw new Error('PHP server is unavailable or is not processing PHP.');
+            }
+            window.location.href = appUrl.href;
+          });
+        }).catch(function () {
+          panelTitle.textContent = 'Paneli i menaxhimit nuk është i disponueshëm';
+          if (window.location.protocol !== 'file:') {
+            panelMessage.textContent = 'Serveri nuk po e përpunon PHP-në. Lidhja nuk u hap, që kodi të mos shfaqet si tekst.';
+          } else {
+            panelMessage.textContent = 'Nuk u gjet server aktiv te http://localhost/ClubHub.';
+          }
+          panelHelp.textContent = 'Nise Apache dhe MySQL në XAMPP, vendose folderin ClubHub brenda htdocs, pastaj provo sërish. Nuk nevojitet ta hapësh skedarin PHP drejtpërdrejt.';
+          if (!window.bootstrap || !window.bootstrap.Modal) {
+            window.location.assign('ADMIN_GUIDE.md');
+          }
+        }).finally(function () {
+          window.clearTimeout(timeoutId);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
